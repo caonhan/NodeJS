@@ -1,0 +1,18 @@
+doctype html
+html(lang='vn')
+  head
+    meta(charset='utf-8')
+    title Danh sách chuyên mục
+    link(href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+    style(type='text/css').
+      ul.cate{border: 1px solid #ACACAC;width: 200px;margin: auto;}
+      li.item{font-weight: 700;font-size: 15px;}
+      ul.subcate{font-style: italic;color: blue;}
+  body
+   ul.cate
+    - each category in categories
+      li.item #{category.name}
+        ul.subcate
+          - each subcate in category.listsubcates
+            li.subitem #{subcate.name}
+    script(src='http://code.jquery.com/jquery.js')
