@@ -3,6 +3,7 @@
 /// <reference path="D:/Github/NodeJS/sample/typings/browser/ambient/node/index.d.ts" />
 /// <reference path="D:/Github/NodeJS/sample/typings/browser/ambient/serve-static/index.d.ts" />
 
+//helloworld.js
 var express = require('express');
 var app = express();
 app.get('/home',function (req, res) {
